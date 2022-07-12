@@ -1,7 +1,7 @@
 class HashTable:
   def __init__(self, number_of_buckets):
-    # self.number_of_buckets = number_of_buckets
-    # self.table = [None] * self.number_of_buckets
+    self.number_of_buckets = number_of_buckets
+    self.table = [None] * self.number_of_buckets
     pass
 
   def hash(self, value):
@@ -22,3 +22,29 @@ class HashTable:
   def has_key(self, value):
     # here is where you'll return a True or False value if there is a value stored at a specific index in your HashTable
     pass
+
+# class HashTable{
+#     constructor(){
+#         this.table = new Array(64)
+ 
+#     }
+#     // naive, useless hash
+#     _hash(key){
+#         let hash = 0
+#         for(let i = 0; i < key.length; i++){
+#             hash += key.charCodeAt(i)
+#         }
+
+#         return has % this.table.length
+#     }
+
+#     set(key, value){
+#         const index = this._hash(key)
+#         this.table[index] = value
+#     }
+
+#     get(key){
+#         const index = this._hash(key)
+#         return this.table[index]
+#     }
+# }
